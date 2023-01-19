@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Belajar Html&JS</title>
+
+             
+        </style>
+
+    </head>
+    <body>
+        <!-- komentar pakai ctrl/  -->
+ <script>
+    document.writeln("Hallowen");
+    document.writeln("</br>");
+    document.writeln(100);
+    document.writeln(1.5);
+    document.writeln("</br>");
+    // bilangan binary
+    document.writeln(0b111001);
+    document.writeln("</br>");
+    // tipe kata bolean true & false
+    document.writeln(   true   ); // benar
+    document.writeln("</br>");
+    document.writeln(   false   ); // salah
+    document.writeln("</br>");
+    // tipe data String (text) berisikan kumpulan kosong atau lebih karakter, di JS untuk membuat data dengan tipe string menggunakan kata "Petik2" atau 'petik1'
+    document.writeln('InYourNightmare');
+    document.writeln("</br>");
+    document.writeln("InYourNightmare")
+    document.writeln("</br>");
+    // tipe data string dengan tambahan kata (+)
+    document.writeln("nama : " + "shibgha");
+    document.writeln("</br>");
+    document.writeln("channel : " + "Programmer Zaman Now");
+    document.writeln("</br>");
+    // Escape Sequence
+    /*
+    bedanya write & writeln adalah dimana ada tipe kata yg di sebut maka tidak ada (enter)
+    tetapi jika digabungkan dengan menjadi writeln maka ada enternya
+    */
+   // tetapi bisa juga mengguankan (\n)= enter
+   //di dalam escape sequence ada (\n)= enter,(\t)= tab/spasi dalam suatu text,(\"")= ",(\'')='
+    document.write("<textarea cols='100' rows='10'>");
+    document.write("\nshibghatallah \nM.P.C.\nG.A.A\n");
+    document.write("\\Home \\IYN\n");
+    document.write("\"Programmer Zaman Now\"\n");
+    document.write("\'Belajar HTML & JS\'\n");
+    document.write("</textarea>");
+    document.writeln("</br>");
+    //Variabel
+    document.write(" Variabel ");
+    document.write("<br></br>");
+    /* Apa itu variabel = tempat untuk menyimpan data
+    #   dengan menyimpan data di variabel, kita bisa menggunakannya lagi dengan menyebutkan nama variabelnya
+    #   untuk membuat variabel JS, kita bisa menggunakan kata kunci var diikuti dengan nama variabelnya
+    #   JS adalah dynamic Language, artinya variabel di JS tidak terpaku harus menggunakan satu tipde data, 
+        kita bisa mengubah- ubah tipe data di variabel yang sama
+    */
+       var FullName; 
+        var FirstName;
+        var MiddleName;
+        var LastName;
+    
+    // mengubah Value di Variable
+    // setelah variable di deklarasikan, kita bisa mengubah value atau nilai di dalam variable tersebut
+    // untuk mengubahnya, kita bisa menggunakan perintah nama variable diikuti dengan tanda = (sama dengan) lalu diikuti dengan value atau nilainya
+        FullName = "shibgha paraklet azis";
+        FullName1 = "Shibghatallah M.P.C.G.A.A"
+        FirstName = "shibgha";
+        MiddleName = "paraklet";
+        LastName = "azis";
+    // Kode : mengakses Variabel
+        document.writeln(FirstName);
+        document.writeln("</br>");
+        document.writeln(MiddleName);
+        document.writeln("</br>");
+        document.writeln(LastName);
+        document.writeln("</br>");
+        document.writeln(FullName);
+        document.writeln("</br>");
+        document.writeln(FullName1);
+        document.writeln("</br> </br>");
+        //# di JS kita juga bisa mendeklarasikan sebuah variable, langsung dengan isi valuenya
+        //# caranya menggunakan kata kunci var, diikuti nama variable, lalu di ikuti dengan tanda =, dan diikuti dengan value atau nilainya
+    // kata kunci var "SEKARANG SUDAH TIDAK TERPAKAI DAN AKAN DI GANTI KANTA KUNCI NYA MENJADI (let)"
+        /*
+         let FullName;
+         let MiddleName;
+         let LastName;
+         let FullName;
+        */
+    // sekarang juga ada yang namanya kata kunci (const)
+    /* kata kunci (const) adalah variabel yang tidak bisa di ubah lagi
+    */
+        const application = "Belajar HTML & JS dasar"
+        document.writeln(application)
+        document.writeln("<br></br>");
+    // OPERATOR PERANGKAT
+    /* Operator (+)= Pertambahan, (-)= Pengurangan, (*)= Perkalian,
+    (**)= Exponensial, (/)= Pembagian, (%)= Sisa Bagi.
+    */
+    /*let result = 1 + 2; // hasil 3
+    document.writeln("<p> 1 + 2 = " + result + "</p>");
+    let originalResult = result;
+    document.writeln("</br>");
+    result = result - 1; // hasil 2
+    document.writeln("<p>" + originalResult + " - 1 =" + result + "</p>");
+    originalResult = result;
+    document.writeln("</br>");
+
+    result = result * 2; // hasil 4
+    document.writeln("<p>" + originalResult + " * 2 =" + result + "</p>");
+    originalResult = result;
+    document.writeln("</br>");
+    */
+    // OPERATOR AUGMENTED ASSIGNMENTS
+    document.writeln(" OPERATOR AUGMENTED ASSIGMENTS");
+    let result = 1 + 2; // hasil 3
+    document.writeln("<p> 1 + 2 = " + result + "</p>");
+    let originalResult = result;
+    document.writeln("</br>");
+
+    result -= 1; // hasil 2
+    document.writeln("<p>" + originalResult + " - 1 = " + result + "</p>");
+    originalResult = result;
+    document.writeln("</br>");
+
+    result *= 2; // hasil 4
+    document.writeln("<p>" + originalResult + " * 2 = " + result + "</p>");
+    originalResult = result;
+    document.writeln("</br>");
+    // OPERATOR UNARY
+    document.writeln(" OEPERATOR UNARY ");
+    // (++)= increment, menaikkan 1 angka, (--)= mengurangi 1 angka
+    let resultt = +1;
+    document.writeln("<p>" + resultt + "</p>");
+    
+    resultt--; // resultt = resultt -1; result -= 1; hasil 0
+    document.writeln("<p>" + resultt + "</p>");
+
+    resultt++; // resultt = resultt + 1; result += 1; hasil 1
+    document.writeln("<p>" + resultt + "</p>");
+
+    resultt = -resultt; // hasil -1
+    document.writeln("<p>" + resultt + "</p>");
+// OPERATOR PERBANDINGAN
+    document.writeln(" OPERATOR PERBANDINGAN ")
+/* (>)= lebih dari, (<)= kurang dari, (>=)= lebih dari sama dengan,(<=)= kurang dari sama dengan,
+(==) sama dengan, (===)= sama dengan dan sama tipe, (!=)= tidak sama dengan, (!==)= tidak sama dengan atau tidak sama tipe.
+*/
+    let resultp = 5 == "5";
+    document.writeln("<p>" + resultp + "</p>");
+
+    resultp = 5 === "5";
+    document.writeln("<p>" + resultp + "</p>");
+
+    resultp = 5 > 10; // false
+    document.writeln("<p>" + resultp + "</p>");
+
+    resultp = 5 < 10; // True
+    document.writeln("<p>" + resultp + "</p>");
+
+    // OPERATOR LOGIKA
+    /* (&&)= dan, (||)= atau, (!)= kebalikan.
+    */
+    document.writeln(" OEPERATOR LOGIKA");
+    const nilaiUjian = 70;
+    const nilaiAbsensi = 70;
+
+    const lulusUjian = nilaiUjian > 75;
+    const lulusAbsensi = nilaiAbsensi > 75;
+
+   const lulus = lulusUjian && lulusAbsensi;
+   document.writeln("<p>" + lulus + "</p>");
+    // ini komentar satu baris dan hanya bisa di bag <script> ==> karena java
+        /* begitu juga dengan
+        ini cuma bisa di 
+        bag <script>
+            */
+// SEKARANG MASUK KEDALAM KODINGAN JS
+    /*console.debug("debug");
+
+    console.info("HELLO WORLD");
+    
+    console.warn("Ini Peringatan");
+    
+    console.error("Ini Error");
+    */
+
+// STRING TEMPLATE
+    const name = "Shibghatallah Paraklet Azis";
+    const template = `Name :${name}`;
+
+    console.info(template);
+// KODE :EXPRESSION DI STRING TEMPLATE
+    document.writeln("KODE : EXPRESSION DI STRING TEMPLATE ");
+    const nilai = 50;
+    const template2 = `name :  ${name}, Lulus : ${nilai > 70}` ;
+
+    console.info(template2);
+//KODE : MULTILINE STRING
+    const multiline = ` nama saya shibgha,
+sekarang lagi belajar,
+sering juga bikin video,
+kalo lg males ya tidur cok `;
+    document.writeln("<pre>");
+        document.writeln(multiline);
+        document.writeln("</pre>");
+    document.writeln("<bre></bre>");
+
+// KONVERSI STRING DAN NUMBER
+//## Kode : masalah tanpa konversi
+
+    const value1 = "1";
+    const value2 = 1;
+    const sum = value1 + value2;
+
+    document.writeln(`<p>${sum}</p>`);
+    document.writeln("<br>");
+ // Melakukan konversi string dan number
+ /* parselnt = mengkonversi dari string ke number (bilangan bulat), parseFloat(string) = mengkonversi dari string kenumber,
+ Number(string) = mengkonversi dari string ke number, number.toString() = mengkonversi dari number ke string.
+ */
+    document.writeln(`<p>${parseInt("1.9")}</p>`);
+    document.writeln(`<p>${parseFloat("1.1")}</p>`);
+    document.writeln(`<p>${Number("1.1")}</p>`);
+
+    const a = 1;
+    const b = 1;
+    const total = a.toString() + b.toString();
+    document.writeln(`<p>${total}</p>`);
+// Nan
+    document.writeln(" Belajar NaN");
+// jika terjadi data yang tidak valid, maka hasil dari konversi tersebut adalah NaN (Not a Number) = number spesial yang menyebukan bahwa ini bukanlah number, 
+// JIKA NaN di operasikan dengan data number lainnya, maka hasilnya akan menjadi Nan lagi.
+    document.writeln(`<p>${parseInt("1salah")}</p>`);
+    document.writeln(`<p>${parseFloat("eko1.1")}</p>`);
+// mentolerin jikalau angkanya berada di depan
+    
+    document.writeln(`<p>${Number("1salah")}</p>`);
+    document.writeln(`<p>${Number("eko1.1")}</p>`);
+// beda kalau menggunakan kode operasi number, dia tidak menoleransikan data tersebut maka tetap akan menjadi NaN.
+
+// KODE : OPERASI PADA NaN
+    document.writeln("KODE : OPERASI PADA NaN");
+    const first = Number("salah"); // NaN
+    const totalnumber = first + 100;
+    document.writeln(`<p>${totalnumber}</p>`);
+// isNan() Function
+    document.writeln("Belajar tentang isNaN() Function")
+    document.writeln(`<p>${isNaN(first)}</p>`);
+    document.writeln(`<p>${isNaN(100)}</p>`);
+    document.writeln(`<p>${isNaN(NaN)}</p>`);
+
+//TIPE DATA ARRAY
+// array adalah tipe data yang berisikan kumpulan data
+// array di JS memiliki sifat dinamis mirip di PHP, artinya datanya bisa bertambah dengan sendirinya saat kita memasukkan data ke dalam Array
+    document.writeln("TIPE DATA ARRAY");
+    let arrayKosong = [];
+    let arrayNama = [ "Shibgha", "Paraklet", "Azis"];
+    document.writeln(`<p>${arrayKosong, arrayNama}</p>`);
+// CARA KERJA ARRAY
+/* setiap data di array akan di simpan dalam posisi berurutan, dimana urutan pertama dimulai dari nomor 0,
+setiap kita menambah data ke array, otomatis data akan disimpan di urutan terakhir,
+urutan di array kita sebut dengan index.
+*/
+
+    const names = [];
+    names.push("shibgha");
+    names.push("Paraklet", "Azis");
+
+    console.table(names);
+</script>
+
+    </body>
+
+</html>
+<!---video lanjut di 1jam 53mnt ->
