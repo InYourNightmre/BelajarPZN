@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // OPTIONAL CHAINING
+/* merupakan OP yang digunakan untuk mengamankan ketika kita ingin mengakses property sebuh object dari data nullsih
+ jika kita mencoba mengakses property dari sebuah object dari data nullish tanpa menggunakan optional chaining operator, maka akan terjadi error.
+ */
+document.writeln("OPTIONAL CHAINING");
+document.writeln("<br></br>");
+
+const PersoN = {};
+
+let country = PersoN?.address?.country;
+//const country = PersoN.address.country;
+
+//document.writeln(`<p>${country}</p>`);
+
+// cara cepat check suatu object!!! 
+
+document.writeln("SUKSES");
+
+document.writeln(`<P>${country}</p>`);
+
+document.writeln(`SUKSES`);
+    </script>
+    
+</body>
+</html>

@@ -488,10 +488,145 @@ document.writeln("<br></br>");
     [lainnya = "object"]
 */ document.writeln("TYPEOF"); // bisa lihat di folder typeof.html
 
-    let data = "shib"; 
+    /*let data = "shib"; 
     
     const typeData = typeof data;
     document.writeln(`<p>${typeData}</p>`);
+    */
+
+//  OPERATOR IN
+document.writeln("OPERATOR In");
+/*in operator adalah operator yang bsia dilakukan untuk mengecek apakah sebuah property ada di dalam object atau tidak
+    jika property tersebut ada di object, maka hasilnya true, sedangkan jika tidak, maka hasilnya fakse
+    tidak hanya di object, in juga bisa digunakan untuk mengecek index di array
+*/
+
+    /*const person = {
+        Firstname: "shibgha",
+        Lastname: "Paraklet"
+    };
+    if ("Firstname" in person) {
+        alert(`hello ${person.Firstname}`);
+    } else {
+        alert("HELLO");
+    }*/         //In Operator hanya akan mengecek apakah sebuah property atau index ada atau tidak, jadi walaupun nilai property atau indexnya undefined atau null, maka tetap akan di anggap ada.
+
+    /*const student = {
+        firstname: "shibgha",
+        middlename: undefined,
+        lastname: "paraklet"
+    }
+
+    if("middlename" in student){
+        alert(`hello ${student.middlename}`);
+    } else {
+        alert("hello student");
+    }*/
+
+// KODE : In Operator Undefined/Null Property
+
+const nameS = [null, "shibgha", null];
+const Result = 0 in nameS;
+document.writeln(`<p>${Result}</p>`);
+
+// TERNARY OPERATOR
+/* adalah op sederhana dari if statement,
+    ternary op terdiri dari kondisi yg dievaluasi, jika menghasilkan true maka nilai pertama di ambil,
+    jika false maka nilai kedua diambil.
+*/
+
+const NILAI = 90;
+let ucapan;
+
+if(NILAI >= 75) {
+    ucapan = "selamat anda lulus";
+} else {
+    ucapan = "silahkan coba lagi";
+}
+document.writeln(`<p>${ucapan}</p>`);
+
+//Kode : dengan Ternary OP instan!!! (DENGAN KASUS SEDERHANA)
+
+ucapan = NILAI >= 75 ? "selamat Anda Lulus" : "Silahkan Coba Lagi";
+document.writeln(`<p>${ucapan}</p>`);
+
+// Nullish Coalescing OP
+document.writeln("NULLSIH COALESCING OP");
+/* adalah null dan undefined
+    nullist coalescing operator(??) adalah OP mirip dengan ternary OP, yang membedakan adalah pada kondisi,
+    jika bernilai null atau undefined, baru value defaultnya di ambil.
+*/
+ let parameter ;
+
+ let data = parameter;
+ if (data === undefined || data === null ){
+    data = "Nilai Default";
+ }
+
+ document.writeln(`<p>${data}</p>`);
+
+ // kode : Nullish Coalescing OP instan!!!
+
+    data = parameter ?? "Nilai DefaulT";
+
+ document.writeln(`<p>${data}</p>`);
+
+// OPTIONAL CHAINING
+/* merupakan OP yang digunakan untuk mengamankan ketika kita ingin mengakses property sebuh object dari data nullsih
+ jika kita mencoba mengakses property dari sebuah object dari data nullish tanpa menggunakan optional chaining operator, maka akan terjadi error.
+ */
+document.writeln("OPTIONAL CHAINING");
+document.writeln("<br></br>");
+
+const PersoN = {};
+
+//const country = PersoN.address.country;
+
+//document.writeln(`<p>${country}</p>`);
+
+// cara cepat check suatu object!!! 
+let country = PersoN?.address?.country;
+
+document.writeln(`SUKSES`);
+
+document.writeln(`<P>${country}</p>`);
+
+document.writeln(`SUKSES`);
+document.writeln("<br></br>");
+//FALSY DAN TRUTHY
+document.writeln("FALSY & TRUTHY");
+document.writeln("<br></br>");
+/* falsy atau kadang di tulis falsey, adalah value yang ketika dalam konteks boolean, dianggap false
+ini adalah salah satu fitur unik dari JS, yg berguna, namun kadang juga sering membingungkan
+jadi di JS, Kondisi itu tidak hanya bisa boolean, tp diluar boolean pun bisa, namun kita harus tahu beberapa data falsy, atau dianggap false
+*/
+/* Data Falsy
+    false = Boolean false
+    0,-0 = Number 0 dan -0 dianggap false
+    "'',``, = semua string kosong dianggap false
+    null = null dianggap false
+    undefined = dianggap false
+    NaN = dianggap false
+
+    */
+
+/* Truthy
+adalah kebalikan dari Falsy
+*/
+
+    const datA = "";
+
+    if(datA){
+        document.writeln("TRUE");
+    }else{
+        document.writeln("FALSE");
+    }
+    document.writeln("<br></br>");
+//OPERATOR LOGIKA DI NON BOOLEAN
+/* Sebelumnya kita sudah tahu bahwa opertaor logika AND(&&) dan OR(||) digunakan untuk dua data boolean
+    Namun berbeda di JS, Kita bisa menggunakan operator logika AND dan OR untuk tipe data non boolean
+*/
+
 
 
 
@@ -500,4 +635,9 @@ document.writeln("<br></br>");
     </body>
 
 </html>
-<!---video lanjut di 2jam 27mnt ->
+<!---video lanjut di 04jam 00mnt ->
+<!-untuk push git hub 
+    1. git add . 
+    2. git commit -m 'nama commit'
+    3. git push origin master 
+-->
