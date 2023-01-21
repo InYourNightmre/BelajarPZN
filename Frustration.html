@@ -269,11 +269,235 @@ urutan di array kita sebut dengan index.
     const names = [];
     names.push("shibgha");
     names.push("Paraklet", "Azis");
+    names.push("joko");
+    names.push("arifqi");
+    names.push("che guevara");
 
     console.table(names);
+// OPERASI DI ARRAY
+/* array.push(value)= menambah data ke array, array.length = untuk mendapatkan panjang array, arrayp[index]= mendapat data di posisi index,
+array[index] = value (mengubah data di posisi index), delete array[index]= menghapus data di posisi index, namun index tidak bergeser.
+*/
+
+    console.info(names[0]);
+    console.info(names[1]);
+    console.info(names[2]);
+
+    console.table(names);
+    
+    delete names[3];
+
+    console.table(names);
+
+    names.push("joko lagi");
+
+    console.table(names);
+
+    names[3] = " di ubah lagi";
+    names.push(1,2,3,4,5);
+    names.push("shibgha", "paraklet", "azis");
+    console.table(names);
+//*attetion " DI DALAM ARRAY TIDAK ADA BATASANNYA HARUS DATA APA, JADI KITA MEMASUKKAN DATA APAPUN KEDALAM ARRAY
+// BAHKAN KITA JUGA BISA MEMASUKKAN ARRAY KE DALAM ARRAY JIKA KITA MAU"
+
+// TIPE DATA OBJECT
+// Associative Array
+/* di bahasa pemograman lain speerti PHP, kita bisa menggunakan index berupa tipe data lain selain number, misal string
+    gitur ini biasanya di sebut associative array atau hash
+    di JS associative array tidak di dukung
+    jikta kita memaksa memasukkan data bukan number di index array, maka JS akan merubah tipe data array tersebut menjadi object, dan ini bisa berbahaya, karena beberapa operasi di array mungkin bisa berubah hasilnya.
+*/
+// Tipe data object adalah tipe data yg mirip dengan tipe data array
+// yang membedakan adalah index pada tipe data object bisa menggunakan string
+// index di object biasanya disebut attributes atau properties, bukan index
+// obejct menggunakan {} kalau array []
+
+   /* const person = {};// tidak memiliki partikel di dalam object
+    // menambah atau mengubah
+    person["nama"] = "shibgha";
+    person["alamat"] = "jl. flores";
+    person["umur"]  = 17;
+
+    console.table(person);
+
+    delete person ["umur"];
+
+    console.table(person);
+    */
+// Kode : membuat object dengan properties
+// lebih simpel tanpa harus membuat object baru lagi
+    const orang = {
+        nama: "shibgha paraklet azis",
+        alamat: "indonesia",
+        umur: 18
+    }
+
+    console.table(orang);
+
+// kode : mengakses property object
+    console.info(`nama : ${orang.nama}`);
+    console.info(`alamat : ${orang.alamat}`);
+    console.info(`umur : ${orang.umur}`);
+
+    console.table(orang);
+
+    delete orang["umur"];
+
+    console.table(orang);
+
+// IF EXPRESSION
+/* if adalah salah satu kata kunci yang digunakan untuk percabangan,
+    percabangan artinya kita bisa mengeksekusi kdoe program tertentu ketika suatu kondisi terpenuhi
+    hampir di semua bahasa pemgroaman ada if
+*/
+document.writeln("IF EXPRESSION");
+const examvalue = 90;
+if(examvalue > 80) {
+    document.writeln("<p>Good Job</p>");
+}
+
+//Else Expression
+/* blok if akan dieksekusi ketika kondisi if bernilai tru,
+    kadang kita ingin melakukan eksekusi program tententu jika kondisi if bernilai false,
+    hal ini bisa di lakukan menggunakan else expression
+*/
+
+if(examvalue > 91) {
+    document.writeln("<p>Good Job</p>");
+} else {
+    document.writeln("<p>Nice Try Bitch</p>");
+}
+
+// ELSE IF EXPRESSION
+/* kadang dalam if, kita butuh membuat beberapa kondisi,
+kasus seperti ini, di JS kita bisa menggunakan Else IF Expression.
+*/
+
+const examValue = 75;
+
+if (examValue > 80) {
+    document.writeln("<p>Excellent");
+} else if (examValue > 70) {
+    document.writeln("<p>Good Bro");
+} else if (examValue > 60) {
+    document.writeln("<p>Try again next time bro");        
+}
+document.writeln("<br></br>");
+// ALert, Propt dan confirm (fitur pop up hanya berlaku di web)
+document.writeln("ALERT, PROMPT DAN CONFIRM")
+/* JS memiliki fitur yang bernama laert, prompt dan confirm
+    Alert digunakan untuk memberi peringatan berupa popup text di browser
+    prompt digunakan untuk meminta input string dari pengguna browser dalam bentuk popup input text
+    sedangkan confirm digunakan untuk meminta input boolean dari pengguna browser dalam bentuk popup input pilihan
+*/
+
+//alert("Jangan Lupa untuk jaga diri");
+
+//const nama = prompt("siapa nama kamu?");
+
+//alert(`Halooo ${nama}`);
+
+/*const masuk = confirm("Anda yakin mau masuk?");
+if(masuk) {
+    const nama = prompt("siapa nama kamu?");
+    alert(`Halooo ${nama}`);
+}else{
+    alert("bye bye");
+} /*
+
+// UNDEFINED
+/* adalah sebuat kata kunci di JS, sebuah tipe data,
+    sebuah variable yang belum di tambakan nilai, maka artinya variable tersebut merupakan tipe undefined
+     kadang untuk programmer JS pemula undefined ini memang agak sedikit membingunkan 
+     undefine itu berbeda dngn null di bahasa pemograman lain
+*/
+
+    /*let Name;
+    if (Name === undefined) {
+        console.info("UNDEFINED"); // bisa ganti console jadi allert
+    } else {
+        console.info("Defined"); // bisa ganti console allert
+    }*/
+
+// UNDEFINED ARRAY VALUE
+
+    const Names = ["Shibgha", "Azis"];
+
+    if(Names[2] === undefined) {
+        console.info("ARRAY UNDEFINED");
+    } else {
+        console.info("ARRAY DEFINED");
+    } 
+    
+// KODE UNDEFINED OBJECT PROPERTY
+    let Person = {};   // kenapa undifined? karena tidaka ada data yang di cantumkan
+    if(Person.name === undefined) {
+        console.info("OBJECT UNDIFINED");
+    } else {
+        console.info("OBJECT DEFINED");
+    }
+//NULL
+/* null merupakan representasi data kosong
+ null berbeda dengan undefined, null berarti variable sudah ditambahkan valuenya, hanya saja valuenya null
+ sedangkan undefined adalah variable ditambahkan value apapun
+*/
+
+/*let Firstname = "NULL";
+
+if(Firstname === undefined){
+    alert("UNDEFINED");
+} else if(Firstname === null){
+    alert("Null");
+} else {
+    alert(Firstname);
+}*/
+document.writeln("<br></br>");
+// SWITCH EXPRESSION
+/* kadang kita hanya butuh menggunakan kondisi sederhana di if statement, seperti hanya menggunakan perbandingan ==
+    switch adalah statement percabangan yg sama dengan if, namun lebih sederhana cara pembuatannya
+    kondisi di switch statement hanya untuk perbandingan ==
+*/ document.writeln("SWITCH EXPRESSION");
+    const Nilai = "B";
+
+    switch (Nilai){
+        case "A":
+            document.writeln("<p>Wowo Anda lulus dengan baik</p>");
+            break;
+        case "B":
+        case "C":
+            document.writeln("<p>Anda Lulus</p>");
+            break;
+        case "D":
+            document.writeln("<p>Anda tidak lulus</p>");
+            break;
+        default:
+            document.writeln("<p>Mungkin saya salah jurusan</p>");
+    }
+//OPERATOR TYPEOF
+/* typeof merupakan operator yang bisa kita gunakan untuk melihat tipe data sebuah value atau variable
+    karena JS merupakan dynamic language, jadi kadang kita perlu mengecek tipe data sebuah value atau variable menggunakan operator typeof
+    hasil dari operator adalah string tipe datanya
+    [Undefine = "undefined"]
+    [Null = "object"]
+    [boolean = "boolean"]
+    [number = "number"]
+    [bitint = "bitint"]
+    [string = "string"]
+    [symbol = "symbol"]
+    [function = "function"]
+    [lainnya = "object"]
+*/ document.writeln("TYPEOF"); // bisa lihat di folder typeof.html
+
+    let data = "shib"; 
+    
+    const typeData = typeof data;
+    document.writeln(`<p>${typeData}</p>`);
+
+
+
 </script>
 
     </body>
 
 </html>
-<!---video lanjut di 1jam 53mnt ->
+<!---video lanjut di 2jam 27mnt ->
