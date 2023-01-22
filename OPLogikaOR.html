@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Logika Or ||</title>
+</head>
+<body>
+    <script>
+    /*Operator logika OR (||), membaca dari kiri kekanan,
+        OP ini akan mengambil nilai pertama yg truthy.
+        jikta tidak ada satupun yang bernilai truthy, maka yang terakhir yang akan diambil,
+        */
+  /*  console.info("hello"||"");
+   console.info(""||[]);
+   console.info(""||"Nol");
+   console.info(0||"Nol");
+   console.info("undefined"||"undefined");
+   console.info("null"||"Null");
+   console.info(0 || false);
+*/
+   const person = {
+    firstname: "Shibgha",
+    lastname:  "Paraklet"
+   }
+   const name = person.firstname ?? person.lastname;
+   console.info(name);
+// JIKA PADA VARIABEL FIRST NAME ITU NULL ATAU TIDAK ADA MAKA AKAN DI AMBIL VARIABEL KE 2 
+//  DI LASTNAME YANG AKAN DI TAMPILKAN DI CONSOLE
+// KALAU STRINGNYA KOSONG "" HARUS MENGGUNAKAN || UNTUK MENGGANTI ?? AGAR BISA NGEBACA DI SELANJUTNYA
+    // OP AND(&&) di Non Boolean
+/* operator logika and(||), membaca dari kiri ke kanan.
+   OP ini akan mengambil nilai pertama yang falsy
+*/
+console.info("hello" && '');
+   console.info("" && []);
+   console.info("" && "Nol");
+   console.info(0 && "Nol");
+   console.info("undefined" && "undefined");
+   console.info("null" && "Null");
+   console.info(0 && false);
+    
+    </script>
+</body>
+</html>

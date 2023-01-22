@@ -509,7 +509,7 @@ document.writeln("OPERATOR In");
         alert(`hello ${person.Firstname}`);
     } else {
         alert("HELLO");
-    }*/         //In Operator hanya akan mengecek apakah sebuah property atau index ada atau tidak, jadi walaupun nilai property atau indexnya undefined atau null, maka tetap akan di anggap ada.
+    }*/     //In Operator hanya akan mengecek apakah sebuah property atau index ada atau tidak, jadi walaupun nilai property atau indexnya undefined atau null, maka tetap akan di anggap ada.
 
     /*const student = {
         firstname: "shibgha",
@@ -613,7 +613,6 @@ jadi di JS, Kondisi itu tidak hanya bisa boolean, tp diluar boolean pun bisa, na
 /* Truthy
 adalah kebalikan dari Falsy
 */
-
     const datA = "";
 
     if(datA){
@@ -623,19 +622,123 @@ adalah kebalikan dari Falsy
     }
     document.writeln("<br></br>");
 //OPERATOR LOGIKA DI NON BOOLEAN
+document.writeln("OP Logika di non boolean");
+document.writeln("<br></br>");
 /* Sebelumnya kita sudah tahu bahwa opertaor logika AND(&&) dan OR(||) digunakan untuk dua data boolean
     Namun berbeda di JS, Kita bisa menggunakan operator logika AND dan OR untuk tipe data non boolean
 */
+/* Operator logika OR (||), membaca dari kiri kekanan,
+    OP ini akan mengambil nilai pertama yg truthy.
+    jikta tidak ada satupun yang bernilai truthy, maka yang terakhir yang akan diambil,
+    */
+  /*  console.info("hello"||"");
+   console.info(""||[]);
+   console.info(""||"Nol");
+   console.info(0||"Nol");
+   console.info("undefined"||"undefined");
+   console.info("null"||"Null");
+   console.info(0 || false);
+*/
+/*const person = {
+    firstname: "Shibgha",
+    lastname:  "Paraklet"
+   }
+   const name = person.firstname ?? person.lastname;
+   console.info(name);
+*/
+// OP AND(&&) di Non Boolean
+/* operator logika and(||), membaca dari kiri ke kanan.
+   OP ini akan mengambil nilai pertama yang falsy
+*/
 
+    console.info("hello" && '');
+   console.info("" && []);
+   console.info("" && "Nol");
+   console.info(0 && "Nol");
+   console.info("undefined" && "undefined");
+   console.info("null" && "Null");
+   console.info(0 && false);
 
+// FOR LOOP
+/* for adalah salah satu kata kunci yang bisa digunakan untuk melkaukan perulangan
+   blok kode yang terdapat di dalam for akan selalu di ulangi selama kondisi terpenuhi
+   */
+/* Sintak Perulangan For
+for(init statement; kondisilpost statement){
+    //block perulangan
+}
+> init statement akan di eksekusi hanya sekali di awal sebelum perulangan
+> kondisi akan di lakukan pengecekan dalam setiap perulangan, jika true perulangan akan dilakukan, jika flse perulangan akan berhenti
+>post statement akan dieksekusi setiap kali diakhir perulangan
+>init statement, kondisi dan post statement tidak wajib diisi, jika kondisi tidak diisi, berarti kondisi selalu bernilai tru
+*/
 
+/*        for(;;){
+       alert("For Loop");
+    }*/
+
+    /*let counter = 1;
+    for(;counter <= 10;){
+        document.writeln(`<p>perulangan ke ${counter}</p>`);
+        counter++;
+    }*/
+// cara cepat loop 
+    for(let counter = 0; counter <= 10;counter++){
+        document.writeln(`<p>perulangan ke ${counter}</p>`);
+    }
+
+// WHILE LOOP
+/* adalah versi perulangan yang lebih sederhana dibanding for loop
+    di while loop, hanya terdapat kondisi perulangan, tanpa ada init statement dan post statement
+    */
+    /*let counter = 3
+    while(counter <= 10){
+        document.writeln(`<p>perulangan ke ${counter}</p>`);
+        counter++;
+    }*/
+//Do While Loop
+/* adalah perulangan yang mirip dengan while
+    perbedaanya hanya akan pada pengecekan kondisi
+    pengecekan kondisi di while loop dilakukan di awal sebelum perulangan dilakukan, sedangkan di do while loop dilakukan setelah perulangan di lakukan
+    oleh karena itu dalam do while loop, minimal pasti sekali perulangan dilakukan walaupun kondisi tida bernila true
+    */
+    /*let counter = 15
+    do{
+        document.writeln(`<p>perulangan ke ${counter}</p>`);
+        counter++;
+    }
+    while(counter <= 10);
+    */
+//Break & Continue
+/*  > pada switch statement, kita sudah mengenal kata kunci break, yaitu untuk menghentikan case dalam switch
+    > sama dengan pada perulangan, break juga digunakan untuk menghetikan seluruh perulangan,
+    > namun berbeda dengan continue, continue digunakan untuk menghentikan perulangan saat ini, lalu melanjutkan ke perulangan selanjutnya
+    */
+   // Contoh menggunakan Break
+    let counter = 2
+    while (true) {
+        document.writeln(`<p>perulangan ke ${counter}</p>`);
+        counter++;
+        if(counter > 10) {
+            break;
+        }
+    }
+    // Contoh menggunakan continue
+    for (let i = 1; i <= 100; i++) {
+        if(i % 2=== 0) {
+            continue;
+        }
+        document.writeln(`<p>Perulangan Ganjil ${i}</p>`);
+    }
+
+// LABEL 
 
 </script>
 
     </body>
 
 </html>
-<!---video lanjut di 04jam 00mnt ->
+<!---video lanjut di 04jam 26mnt 20dtk ->
 <!-untuk push git hub 
     1. git add . 
     2. git commit -m 'nama commit'
