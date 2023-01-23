@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForIN</title>
+</head>
+<body>
+    <script>
+//PERULANGAN FOR IN
+/* >merupakan perulangan for yg digunakan untuk mengiterasi seluruh data property di object atau index di array
+    > walaupun for in bisa digunakan untuk array, namun tidak direkomendasikan untuk array, karena biasanya kita jarang sekali butuh data index atau array, kita bisa menggunakan For OF (yang dibahas setelah ini)
+*/
+ const PERSON
+ = { 
+    firstname: "Shibgha",
+    middlename: "Paraklet",
+    lastname: "Azis"
+ };
+ for(const property in PERSON){
+    document.writeln(`<p>${property} : ${PERSON[property]}</p>`);
+ }
+
+ //Kode for in di array
+const name = ["shibgha","paraklet","azis"];
+for(const index in name) {
+    document.writeln(`<p>${index} : ${name[index]}</p>`);
+}
+
+    </script>
+</body>
+</html>

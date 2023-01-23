@@ -732,6 +732,50 @@ for(init statement; kondisilpost statement){
     }
 
 // LABEL 
+/* >Merupakan penanda yang bisa dugunakan dengan kata kunci break dan continue
+    >secara default saat kita melakukan break atau continue, dia akan melakukan terhadap pengulangan dimana kode break dan continue itu digunakan
+    > dengan menggunakan label, kita bisa melakukan break dan continue terhadap perulangan yang kita inginkan, asalkan pada perulangannya kita gunakan label
+    >untuk membuat label, kita bisa gunakan nama label lalu diikuti dengan : (titik dua)
+*/
+    loopi:
+    for(let i = 0; i < 20; i++) {
+        loopj:
+        for(let j = 0; j < 10; j++){
+            console.info(`${i} -  ${j}`);
+        }
+    }
+// Kode : Continue di dalam label
+         
+    loopi:
+    for(let i = 0; i < 20; i++) {
+        loopj:
+        for(let j = 0; j < 10; j++){
+            if(j >10){
+                continue loopi;
+            }
+            console.info(`${i} -  ${j}`);
+        }
+    }
+
+//PERULANGAN FOR IN
+/* >merupakan perulangan for yg digunakan untuk mengiterasi seluruh data property di object atau index di array
+    > walaupun for in bisa digunakan untuk array, namun tidak direkomendasikan untuk array, karena biasanya kita jarang sekali butuh data index atau array, kita bisa menggunakan For OF (yang dibahas setelah ini)
+*/
+ const PERSON
+ = { 
+    firstNAME: "Shibgha",
+    middleNAME: "Paraklet",
+    lastNAME: "Azis"
+ };
+ for(const property in PERSON){
+    document.writeln(`<p>${property} : ${PERSON[property]}</p>`);
+ }
+//Kode for in di array
+const NAME = ["shibgha","paraklet","azis"];
+for(const index in NAME) {
+    document.writeln(`<p>${index} : ${NAME[index]}</p>`);
+}
+
 
 </script>
 
