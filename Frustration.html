@@ -802,6 +802,7 @@ document.writeln(`<br>FUNCTION</P>`);
 // (SCRIPT ADA DI FILE FUNCTION)
 
 //FUNCTION PARAMETER
+document.writeln(`<br>FUNCTION PARAMETER</br>`);
 /*  >ktia bisa mengirim informasi ke function yang ingin kita panggil
     >untuk melakukan hal tersebut, kita perlu menambahkan parameter atau argument di function yang sudah kita buat
     >parameter ditempatkan di dalam kurung() di deklarasi method
@@ -810,6 +811,67 @@ document.writeln(`<br>FUNCTION</P>`);
 
 // (SCRIPT ADA DI FILE FUNCTION)
 
+// FUNCTION RETURN VALUE
+document.writeln(`<br>FUNCTION RETURN VALUE</br>`);
+/*  >Secara default, function itu tidak menghasilkan value apapun, namun jika kita ingin, kita bisa membuatsebuah function mengembalikan valu
+    > agar function bisa menghasilkan value, kita bisa emnggunakan kata kunci return di dalam functionnya.
+    > dan di dalam block function, untuk menghasilkan nilai tersebut, kita harus menggunakan kata kunci return, lalu diiuti dengan data yang ingin kita hasilkan.
+    > function hanya bisa mengembalikan satu data, jika kita ingin mengembalikan beberapa data sekaligus, kita bisa menggunakan array sebgai return valuenya.
+*/
+// Kode : Function return Value lebih dari satu
+
+// (SCRIPT ADA DI FILE FUNCTION RETURN VALUE)
+
+
+// OPTIONAL PARAMETER
+    document.writeln(`<br>OPTIONAL PARAMETER</br>`);
+/*  >secara default, parameter di function itu optional
+    >artinya kita tidak wajib mengisi valuenya ketika memanggil function
+    >jika tidak ada value yang kita kirim ke parameter ketika memanggil function, maka secara otomatis parameter tersebut bernilai undefined
+*/
+
+//(SCRIPT ADA DI FILE OPTIONAL PARAMETER)
+
+//DEFAULT PARAMETER
+document.writeln(`<br>DEFAULT PARAMATER</br>`);
+/*  > sekarang kita tahu bahwa parameter itu optional, artinya kita bisa tidak memberi value terhadap parameter
+    > parameter juga bisa kita beri default value, artinya jika ketika kita tidak mengirim data ke parameter atau kita mengirim data undefine,
+    maka secara otomatis parameter akan diisi oleh default value
+*/
+//(SCRIPT ADA DI FILE DEFAULT PARAMETER)
+
+//REST PARAMETER
+document.writeln(`<br>REST PARAMETER</br>`);
+/*  >Rest Parameter adalah fitur dimana kita bisa mengirim data sebanyak-banyaknya pada satu parameter, dan secara otomatis akan di konversi menjadi array
+    > untuk membuat rest parameter, ada ketentuannya
+    > rest parameter hanya boleh ada satu di function, tidak boleh dari satu
+    > rest parameter hanya boleh berada di posisi paling akhir, tidak boleh di depan atau di tengah,
+    kecuali memang cuma ada 1 parameter
+    >   di bahasa pemrograman lain, ada juga yang bilang ini adalah vaiarble argument
+*/
+
+//(SCRIPT ADA DI FILE REST PARAMETER)
+
+// ada fitur yang bernama spread syntax
+/*  > kadang kita terlanjur memiliki data berupa array
+    > tapi untungnya kita juga bisa mengirim array ke rest parameter
+    > kita bisa gunakan..(titik tiga kali) diikuti dengan arraynya ketika memanggil function
+    >  fitur ini dinamakan spread syntax
+*/
+
+//(SCRIPT ADA DI FILE REST PARAMETER)
+
+//Membahas fitur lama "Arguments Object"
+/*  > sebelum ada fitur rest parameter, di JS sudah ada fitur yang bernama arguments object
+    > ini adalah fitur dimana kita bisa mengambil semua parameter dalam bentuk array dengan menggunakan object bernama arguments
+    > arguments secara otomatis bisa digunakan di function
+    > namun perlu diingat, bahwa untuk JS saaat, lebih baik disarankan menggunakan rest parameter dibanding arguments object
+*/
+//(SCRIPT ADA FILE REST PARAMETER)
+
+
+
+
 
 
 </script>
@@ -817,7 +879,7 @@ document.writeln(`<br>FUNCTION</P>`);
     </body>
 
 </html>
-<!---video lanjut di 05jam 01mnt 13dtk ->
+<!---video lanjut di 05jam 37mnt 43dtk ->
 <!-untuk push git hub 
     1. git add . 
     2. git commit -m 'nama commit'
