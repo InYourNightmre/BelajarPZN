@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+/*  >scope merupakan area akses sebuah data
+    > ada dua jenis scope, global scope dan local scope.
+    > setiap kita membuat function, maka kita akan membuat local scope untuk function tersebut
+    > data di global scope bisa di akses dari local scope, namun data di local scope hanya bisa di akses di local scope tersebut atau di scope local dibawahnya(dalam kasus function dalam function)
+*/
+
+//GLOBAL SCOPE
+
+let counter = 0;
+
+function hitme(){
+    //local scope hitme
+    counter++;
+}
+
+function other(){
+    //local scope other
+}
+
+hitme();
+hitme();
+
+console.info(counter);
+
+//LOCAL SCOPE
+
+function first()    {
+    // local scope first
+    let firstVariable = "first";
+    console.info(firstVariable);
+}
+
+
+function second() {
+    //local scope second
+    let secondVariable = "second";
+    console.info(secondVariable);
+}
+
+first();
+second();
+
+        //global scope
+//console.info(firstVariable); //ERROR
+//console.info(secondVariable);//ERROR
+
+//Kode : Nester Function Scope
+function First(){
+    //local scope first
+    let FirstVariable = "First123";
+
+    function firstNested(){
+        console.info(FirstVariable); 
+    }
+
+    firstNested();
+}
+
+function Second(){
+    //local scope second
+    let SecondVariable = "Second123";
+
+    function secondNested(){
+        console.info(SecondVariable);
+    }
+    secondNested();
+}
+First();
+Second();
+
+    </script>
+</body>
+</html>
