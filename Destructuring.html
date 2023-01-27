@@ -8,7 +8,123 @@
 </head>
 <body>
     <script>
-        
+            //Kode : mengambil data di array
+//        const names = ["shib", "paraklet", "azis"];
+//        const firstName = names[0];
+//        const middleName = names[1];
+//        const lastName = names[2];
+
+//        console.info(firstName);
+//        console.info(middleName);
+//        console.info(lastName);
+
+            //kode : Destructuring Array
+    {    const Names = ["shibgha", "paraklet", "che", "guevara"]
+        const [firstname, middlename, lastname, ...others] = Names;
+
+        console.info(firstname);
+        console.info(middlename);
+        console.info(lastname);
+        console.info(others);
+    }
+{            // : Mengambil data di Object
+        const person = {
+            Firstname: "Shibghaa",
+            Lastname: "Paraklet",
+            address: {
+                street: "jalan belum ada",
+                city: "pontianak",
+                country: "Indonesia"
+            },
+            hobby: "game",
+            channel: "PZN"
+        };
+
+
+        const {Firstname, Lastname, address, ...others} = person;
+        console.info(Firstname);
+        console.info(Lastname);
+        console.info(address);
+        console.info(others);
+    }
+
+        // Kode :destructuring Nested Object
+{
+    const person = {
+            Firstname: "Shibghaa",
+            Lastname: "Paraklet",
+            address: {
+                street: "jalan belum ada",
+                city: "pontianak",
+                country: "Indonesia"
+            },
+            hobby: "game",
+            channel: "PZN"
+        };
+
+
+        const {Firstname, Lastname, address: {city, street, country}, ...others} = person;
+        console.info(Firstname);
+        console.info(Lastname);
+        console.info(city);
+        console.info(street);
+        console.info(country);
+        console.info(others);
+}
+
+{
+//Destructuring Function Parameter(1)
+    function displayPerson({FirstName, MiddleName, LastName}){
+        console.info(FirstName);
+        console.info(MiddleName);
+        console.info(LastName);
+    }
+
+    const person = {
+        FirstName: "Shibgha",
+        MiddleName: "Paraklet",
+        LastName: "Azis"
+    };
+
+    displayPerson(person);
+
+}
+
+{
+//Destructuring Function Parameter(2)
+    function sum([first, second]){
+        return first + second;
+    }
+
+    console.info (sum([1,1]));
+    console.info (sum([10,10]));
+}
+
+{
+//DEFAULT VALUE
+/*  > yang paling menarik di destructuring adalah, kita bisa menambahkan default value
+    > jadi misal kita melakukan destructuring terhadap array, ternyata tidak ada datanya,maka kita bisa menambahkan default value
+    > begitu juga pada object, jika ternyata property nya tidak ada, maka kita bisa emnambahkan default value
+*/
+
+    const names = ["shibgha", "Paraklet", "azis"];
+    const [firstname, middlename, lastname = "arifqi"] = names;
+
+    console.info(firstname);
+    console.info(middlename);
+    console.info(lastname);
+
+ 
+
+
+}
+
+
+
+
+
+
+
     </script>
 </body>
 </html>
