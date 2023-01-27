@@ -934,9 +934,69 @@ document.writeln(`<br>REST PARAMETER</br>`);
 
 // (SCRIPT ADA DI FUNCTION ARROW)
 
+//Closure
+/*  > adalah kombinasi function dan bundel referensi ke data sekitaranya.
+    > oke agak membingungkan memang, apalagi untuk yang baru pertama belajar
+    > kita sudah tahu bahwa local scope tidak bisa diakses di luar scopenya
+    > dengan kemampuan closure, kita bisa membuat sebuah function di local scope dan referensi ke data di sekitar local scope tersebut, keluar scopenya
+*/
+
+//(SCRIPT ADA DI FILE CLOSURE)
+
+//OBJECT METHOD
+/*  > pada tipe data object, kita sudah membahas tentang property di object
+    > karena sebenarnya function juga merupakan salah satu tipe data, jadi function pun sebenarnya bisa ditambahkan sebagai property di object
+    > cara pembuatannyapun sama dengan function sebagai value
+    > function di object kadang di sebut juga sebagai object method
+*/
+
+//(SCRIPT ADA DI FILE OBJECT METHOD)
 
 
+//KATA KUNCI THIS
+/*  > Kata kunci this adalah referensi ke object milik siapa
+    > tiap lokasi kata kunci this, bisa berbeda-beda referensi pemiliknya
+    > dalam object method, this merupakan referensi ke object pemilik functionnya
+    > di global scope, this merupakan referensi ke global object (di browser biasanya window)
+    > di dalam function, this merupakan referensi ke global object( di browser biasanya window)
+    > di function dengan strict mode (akan dibahas nanti), this adalah undefined
+    > dalam event, this merupakan referensi ke element yang menerima event (dibahas di materi document object model)
+*/
 
+//(SCRIPT ADA DI FILE KATA KUNCI THIS)
+
+//ARROW FUNCTION DI OBJECT
+/*  > sebelumnya kita sudah bahas tentang arrow function
+    > arrow function juga bisa kita unakan di sebagai object method
+    > namun perlu diketahui, arrow function tidak bisa digunakan untuk mengakses arguments object, function generator, kata kunci this dan kata kunci super (dibahas di materi JS object oriented programming)
+    > jadi pastikan gunakan arrow function hanya memang ketika kita tidak butuh fitur-fitur diatas
+*/
+
+//(SCRIPT ADA DI ARROW FUNCTION OBJECT)
+
+//GETTER dan SETTER
+/*  > adalah kemampuan membaut function yang berbeda untuk mengambil data(getter) dan mengubah data(setter) pada sebuah property di object
+    > dengan menggunakan getter dan setter, ktia bisa melakukan hal apapun dalam function sebelum sebuah property di akses atau diubah, misal menambah validasi dan lain-lain
+*/
+
+//(SCRIPT ADA DI GETTER DAN SETTER)
+
+//MASALAH VARIABLE VAR
+/*  >sebelumnya sudah dijelaskan bahwa penggunaan var sudah tidak direkomendasikan lagi, dan di ganti dengan let
+    >kenapa?
+    >alasan var tidak direkomendasikan digunakan lagi adalah, karena var tidak memiliki block scope, artinya dia tidak mengikat ke local scope yang sebelumnya sudah kita bahas
+    >karena masalah ini, var bisa tidak terprediksi
+    >kita akan buat contoh penggunaan var dan let
+*/
+
+//(SCRIPT ADA DI FILE MASALAH VARIABLE VAR)
+
+//DESTRUCTURING
+/*  > adalah fitur yang bisa di gunakan untuk membongkar value-value di array atau object kedalam variable - variable
+    > fitur ini sangat mempermudah kita ketika ingin mengambil data dari array atau object tanpa harus melakukan pengambilan data satu persatu
+*/
+
+//(SCRIPT ADA DI FILE DESTRUCTURING)
 
 
 
