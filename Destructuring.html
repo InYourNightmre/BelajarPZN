@@ -113,14 +113,48 @@
     console.info(firstname);
     console.info(middlename);
     console.info(lastname);
+}
 
- 
+{
+// kode : default value destructuring object
+    const person = {
+        FIRSTNAME: "shibgha",
+        LASTNAME: "paraklet"
+    };
 
+    let {FIRSTNAME, MiddleNAME = "shibghatallah", LASTNAME} = person;
+    console.info(FIRSTNAME);
+    console.info(MiddleNAME);
+    console.info(LASTNAME);
 
 }
 
+{
+// Menggunakan nama variable lain
+/*  > saat melakukan destructuring di array, kita bisa dengan mudah membuat nama variable sesuka kita
+    > namun pada saat melakukan destructuring, kita harus membuat nama variable sama dengan nama property
+    > kita juga bisa menggunakan nama variable lain saat melakukan destructuring object jika kita mau
+*/
+
+const person = {
+        FIRSTNAME: "shibgha",
+        MIDDLENAME: "muhammad",
+        LASTNAME: "paraklet"
+    };
+
+    let {FIRSTNAME: namadepan,
+        MIDDLENAME: namatengah = "arifqi",
+        LASTNAME: namabelakang} = person;
+    console.info(namadepan);
+    console.info(namatengah);
+    console.info(namabelakang);
 
 
+
+
+
+
+}
 
 
 
